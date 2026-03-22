@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd # pyright: ignore[reportMissingModuleSource]
 
 df_vendas = pd.read_csv("datasets/vendas_2023_2024.csv")
 

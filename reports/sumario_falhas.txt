@@ -1,0 +1,29 @@
+RELATÓRIO DE AUDITORIA DE VENDAS
+========================================
+
+Total de Transações Analisadas: 9895
+Transações com Prejuízo: 6179
+Prejuízo Total da Operação: R$ 182,226,478.73
+
+LISTA DE TRANSAÇÕES CRÍTICAS (ID Venda | ID Produto | Prejuízo):
+-------------------------------------------------------
+Venda: 5124     | Prod: 72    | R$ 1,179,502.40
+Venda: 1414     | Prod: 72    | R$ 1,109,808.44
+Venda: 1564     | Prod: 72    | R$ 1,098,358.11
+Venda: 4113     | Prod: 72    | R$ 1,059,868.03
+Venda: 1914     | Prod: 72    | R$ 1,001,138.75
+Venda: 515      | Prod: 83    | R$   927,948.62
+Venda: 1727     | Prod: 72    | R$   913,411.38
+Venda: 2653     | Prod: 83    | R$   912,387.41
+Venda: 4941     | Prod: 72    | R$   855,735.34
+Venda: 8172     | Prod: 72    | R$   842,722.56
+Venda: 8601     | Prod: 72    | R$   842,524.61
+Venda: 6648     | Prod: 72    | R$   816,895.24
+Venda: 1402     | Prod: 83    | R$   797,772.05
+Venda: 7093     | Prod: 72    | R$   781,138.71
+Venda: 4040     | Prod: 72    | R$   767,275.28
+Venda: 934      | Prod: 72    | R$   760,137.91
+Venda: 4541     | Prod: 72    | R$   758,402.41
+Venda: 1134     | Prod: 72    | R$   752,279.22
+Venda: 502      | Prod: 72    | R$   742,708.22
+Venda: 2665     | Prod: 72    | R$   742,186.99
