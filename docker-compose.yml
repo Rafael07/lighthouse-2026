@@ -1,0 +1,25 @@
+services:
+  db:
+    image: postgres:17
+    container_name: postgres_lighthouse
+    restart: always
+    environment:
+      POSTGRES_USER: indicium
+      POSTGRES_PASSWORD: indicium
+      POSTGRES_DB: lighthouse
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_lighthouse
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
