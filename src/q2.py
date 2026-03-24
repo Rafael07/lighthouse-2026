@@ -1,7 +1,7 @@
-# Tarefas: 
-# Parte 1 — Padronize os nomes das categorias de produtos em: eletrônicos, propulsão e ancoragem.
-# Parte 2 — Converta os valores para o tipo numérico.
-# Parte 3 — Remova as duplicatas.
+# Tarefas para não esquecer:
+# 1 — Padronize os nomes das categorias de produtos em: eletrônicos, propulsão e ancoragem.
+# 2 — Converta os valores para o tipo numérico.
+# 3 — Remova as duplicatas.
 
 import unicodedata
 import pandas as pd
@@ -31,7 +31,7 @@ def clean_strings(texto):
     texto = texto.lower()
     # remove os acentos
     texto = unicodedata.normalize('NFKD', texto).encode('ASCII', 'ignore').decode('utf-8')
-    # 3. Remover TUDO que não for letra (isso mata espaços, hífens, números soltos)
+    # 3. Remover TUDO que não for letra 
     texto = re.sub(r'[^a-z]', '', texto)
 
     return texto
@@ -60,9 +60,11 @@ print(f"Quantidade de categorias distintas após limpeza inicial: {total_clean_c
 # Mostra a categoria e a contagem de vezes que ela aparece após a limpeza
 print(df_produtos['actual_category'].value_counts())
 
+# Aqui, vou constatar que price é do tipo object
 tipo_price = df_produtos['price'].dtype
 print(f"Tipo de dado da coluna 'price': {tipo_price}")
 
+# A função irá converter strings para float
 def text_to_float(price):
     """
     Função genérica para extrair float de strings da coluna price.
@@ -86,13 +88,7 @@ print(f"Quantidade de linhas antes de remover as duplicatas: {len(df_produtos)}"
 df_produtos = df_produtos.drop_duplicates()
 print(f"Quantidade de linhas depois de remover as duplicatas: {len(df_produtos)}")
 
-# ==============================================================================
-# PERSISTÊNCIA DO DATASET LIMPO
-# ==============================================================================
 # Salva o dataset tratado para uso na questão 5
-# index=False evita criar coluna extra com índice numérico
 
 df_produtos.to_csv('datasets/produtos_refined.csv', index=False, encoding='utf-8')
 print(f"\n✓ Dataset limpo salvo em 'datasets/produtos_refined.csv'")
-print(f"  Total de registros: {len(df_produtos)}")
-print(f"  Colunas: {list(df_produtos.columns)}")
